@@ -5,10 +5,21 @@
   background-color: #4056A1;
   color: white;
   align-items: center;
+  justify-content: space-between;
   padding: 1.5em;
 
 }
 
 .logo {
   font-family: bungee;
+}
+
+.newtweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow {
+  color:tomato;
 }
