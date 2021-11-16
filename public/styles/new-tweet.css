@@ -1,0 +1,40 @@
+.new-tweet {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+#tweet-text {
+  margin-top: 1em;
+  min-height: 3em;
+  min-width: 100%;
+  max-width: 100%;
+  font-weight: bolder;
+  color:midnightblue;
+  padding-bottom: .5em;
+  border: none;
+  border-bottom: 3px solid #232323;
+  background: white;
+}
+
+.counter {
+  display: flex;
+  font-family: 'Bungee';
+  justify-content: space-between;
+}
+
+button {
+  color: white;
+  background: #4056A1;
+  display: inline-block;
+  font-family: 'Bungee';
+  padding: 0.2em 0.5em;
+  transition: all 0.2s;
+  
+}
+#tweet-below {
+  display: flex;
+  justify-content: space-between;
+}
