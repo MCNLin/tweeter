@@ -1,0 +1,14 @@
+.banner {
+  display: flex;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: white;
+  align-items: center;
+  padding: 1.5em;
+
+}
+
+.logo {
+  font-family: bungee;
+}
