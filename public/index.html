@@ -57,8 +57,8 @@
       <h2>Compose Tweet</h2>
       <form method="POST" action="/tweets/">
         <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div>
+        <textarea class="textarea" name="text" id="tweet-text" rows = "1" minlength="1" maxlength="140"></textarea>
+        <div id= "tweet-below">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
