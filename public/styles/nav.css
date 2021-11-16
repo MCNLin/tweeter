@@ -7,6 +7,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5em;
+  position: fixed;
+  z-index: 10;
+  top:0
 
 }
 
@@ -23,3 +26,4 @@
 .arrow {
   color:tomato;
 }
+
