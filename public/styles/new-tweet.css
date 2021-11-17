@@ -30,7 +30,6 @@ button {
   font-family: 'Bungee';
   padding: 0.2em 0.5em;
   transition: all 0.2s;
-  
 }
 #tweet-below {
   display: flex;
