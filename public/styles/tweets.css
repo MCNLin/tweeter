@@ -29,8 +29,8 @@ article.tweet > header {
 
 article.tweet img {
   margin-right: .5em;
-  height: 70px;
-  width: 70px;
+  height: 75px;
+  width: 75px;
 }
 
 .tweet-content {
@@ -62,3 +62,8 @@ article.tweet footer div {
   font-size: 1em;
   color: #211f92;
 }
+
+article.tweet footer div i:hover  {
+  color: rgba(77, 194, 223, 0.876);
+  transition: .2s; 
+  }
