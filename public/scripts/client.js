@@ -29,18 +29,55 @@ const data = [
     "created_at": 1461113959088
   }
 ]
-
-const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
+//loops through the data and adds userinput to tweet
+function renderTweets(tweets) {
+  for (let tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    $('#tweet-container').append($tweet);
+  }
 }
 
-const createTweetElement = function(tweet) {
-let $tweet = /* Your code for creating the tweet element */
-// ...
-return $tweet;
-}
+// generate generic tweetelement outline
+function createTweetElement (tweetData) {
+  const {user, content, created_at} = tweetData;
+  //create variable for outline of new tweets
+  const tweetElementHTML = $(`<article class="tweet"> 
+  <header>
+    <span class="username"><img src="${user.avatars}">${user.name}</span>
+    <span class="userHandle">${user.handle}</span>
+    </header>
+    <div class="tweet-content">
+      <p>${content.text}</p>
+    </div>
+    <footer>
+      <p>${timeago.format(created_at)}</p>
+      <div>
+        <i class="far fa-flag"></i> 
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+      </div>
+    </footer>
+</article>`)
+  return tweetElementHTML;
+};
 
-renderTweets(data);
+$(document).ready(function() {
+  renderTweets(data);
+  $("#post-tweet").submit(function(event){
+    event.preventDefault();
+    console.log("New Tweet Posted!");
+    // console.log("CurrentTarget---->",event.currentTarget.value)
+    console.log("target---->", event.target[0].value)
+
+    $.ajax("/tweets",{
+      method: "post",
+      data: $("#post-tweet").serialize()
+    })
+  
+  });
+
+});
+
+  // $("#tweet-container").prepend($tweet);
+
 
