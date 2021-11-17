@@ -41,8 +41,8 @@
       <span><strong>Write</strong> a new tweet</span>
       <span><i class="fas fa-angle-double-down arrow"></i> </span>
     </div>
-
   </nav>
+
   <header class="profile">
     <div>
         <img src="/images/profile-hex.png"> 
@@ -57,9 +57,9 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets/">
+      <form id="post-tweet" method="POST" action="/tweets">
         <label for="tweet-text">What are you humming about?</label>
-        <textarea class="textarea" name="text" id="tweet-text"rows = "1" minlength="1"></textarea>
+        <textarea class="textarea" name="text" id="tweet-text"rows = "1" minlength="1" type="submit" type= "text"></textarea>
         <div id= "tweet-below">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
@@ -73,69 +73,70 @@
             <img src=https://cdn0.iconfinder.com/data/icons/people-avatars-9/24/people_avatar_head_einstein_albert_scientist-512.png alt=""/>
             <div>Albert Einstein</div>
           </div>
-           <div class="userhandle">@theDopeyOne</div>
-          </header>
-          <div class="tweet-content">
-            <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”</p>
+          <div class="userhandle">@theDopeyOne</div>
+        </header>
+        <div class="tweet-content">
+          <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”</p>
+        </div>
+        
+        <footer>
+          <p>10 days ago</p>
+          <div>
+            <i class="far fa-flag"></i> 
+            <i class="fas fa-retweet"></i>
+            <i class="far fa-heart"></i>
           </div>
-         
-          <footer>
-            <p>10 days ago</p>
-            <div>
-              <i class="far fa-flag"></i> 
-              <i class="fas fa-retweet"></i>
-              <i class="far fa-heart"></i>
-            </div>
-          </footer>
+        </footer>
       </article>
     </section>
-    <section>
-      <article class="tweet">
-        <header>
-          <div class ="username" >
-            <img src=https://static.thenounproject.com/png/53063-200.png alt=""/>
-            <div>Maya Angelou</div>
-          </div>
-           <div class="userhandle">@Maya</div>
-          </header>
-          <div class="tweet-content">
-            <p>“What you're supposed to do when you don't like a thing is change it. If you can't change it, change the way you think about it. Don't complain.”</p>
-          </div>
-         
-          <footer>
-            <p>12 days ago</p>
-            <div>
-              <i class="far fa-flag"></i> 
-              <i class="fas fa-retweet"></i>
-              <i class="far fa-heart"></i>
-            </div>
-          </footer>
-      </article>
-    </section>
-    <section>
-      <article class="tweet">
-        <header>
-          <div class ="username" >
-            <img src="/images/naruto.png" alt=""/>
-            <div>Uzumaki Naruto</div>
-          </div>
-           <div class="userhandle">@NanadaimeHokage</div>
-          </header>
-          <div class="tweet-content">
-            <p>“If you don’t like your destiny, don’t accept it. Instead have the courage to change it the way you want it to be.”</p>
-          </div>
-         
-          <footer>
-            <p>16 days ago</p>
-            <div>
-              <i class="far fa-flag"></i> 
-              <i class="fas fa-retweet"></i>
-              <i class="far fa-heart"></i>
-            </div>
-          </footer>
-      </article>
-    </section>
-  </main>
+    <article class="tweet">
+      <header>
+        <div class ="username" >
+          <img src=https://static.thenounproject.com/png/53063-200.png alt=""/>
+          <div>Maya Angelou</div>
+        </div>
+        <div class="userhandle">@Maya</div>
+      </header>
+      <div class="tweet-content">
+        <p>“What you're supposed to do when you don't like a thing is change it. If you can't change it, change the way you think about it. Don't complain.”</p>
+      </div>
+      
+      <footer>
+        <p>12 days ago</p>
+        <div>
+          <i class="far fa-flag"></i> 
+          <i class="fas fa-retweet"></i>
+          <i class="far fa-heart"></i>
+        </div>
+      </footer>
+    </article>
+  </section>
+  <section>
+    <article class="tweet">
+      <header>
+      <div class ="username" >
+        <img src="/images/naruto.png" alt=""/>
+        <div>Uzumaki Naruto</div>
+      </div>
+      <div class="userhandle">@NanadaimeHokage</div>
+    </header>
+    <div class="tweet-content">
+      <p>“If you don’t like your destiny, don’t accept it. Instead have the courage to change it the way you want it to be.”</p>
+    </div>
+    
+    <footer>
+      <p>16 days ago</p>
+      <div>
+        <i class="far fa-flag"></i> 
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+      </div>
+    </footer>
+  </article>
+</section>
+<section id ="tweet-container">
+
+</main>
 </body>
 
 </html>
