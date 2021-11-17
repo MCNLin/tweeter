@@ -8,15 +8,13 @@
 
 #tweet-text {
   margin-top: 1em;
-  min-height: 3em;
+  min-height: 1em;
   min-width: 100%;
   max-width: 100%;
   font-weight: bolder;
-  color:midnightblue;
-  padding-bottom: .5em;
-  border: none;
-  border-bottom: 3px solid #232323;
-  background: white;
+  color:white;
+  border-bottom: 3px solid#ffffff;
+  background:midnightblue;
 }
 
 .counter {
@@ -37,4 +35,5 @@ button {
 #tweet-below {
   display: flex;
   justify-content: space-between;
+  padding-top: 7px ;
 }
