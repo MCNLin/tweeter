@@ -5,7 +5,7 @@ $(document).ready(function() {
     let remainingCharacter = maxCharacters - characterCount;
     // console.log(remainingCharacter)
     $(".counter").text(remainingCharacter);
-
+    //the counter becomes red when over the char limit   
     if (remainingCharacter < 0) {
       $(".counter").css("color","red");
     } else {
