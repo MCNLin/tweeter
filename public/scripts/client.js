@@ -38,9 +38,9 @@ function createTweetElement (tweetData) {
     <footer>
     <p>${timeago.format(created_at)}</p>
     <div>
-    <i class="far fa-flag"></i> 
+        <i class="far fa-flag"></i> 
         <i class="fas fa-retweet"></i>
-        <i class="far fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
         </div>
     </footer>
     </article>`)
@@ -56,27 +56,29 @@ const loadTweets = function(){
 };
 
 const $form = $('form');
+      $("#error").hide();
     $form.on('submit', function (event) {
       event.preventDefault()
-      console.log(event)
-      if (event.target[0].value === '') {
-        return alert('This message is empty');
-      }
-      if(event.target[0].value.length > 140) {
-        console.log("value---------->",event.target[0].length)
-        return alert('You have got a lot to say, remember only 140 characters!');
-      }
-
-
-      $.ajax("/tweets",{
-        method: "post",
-        data: $("#post-tweet").serialize(),
-        success: () => {
+      $("#error").slideDown();
+      const newTweet = $(this).find("#tweet-text").val();
+        if (!newTweet.trim()) { // event.target[0].value === ''
+          $("#error")
+          .html("!!! Share something, don't be shy !!!").slideDown();
+         }
+        if (newTweet.length > 140) { 
+          $("#error")
+          .html("!!! You've got a lot to say, remember only 140 characters !!!").slideDown();
+        } else {
+          $.ajax("/tweets",{
+          method: "post",
+          data: $("#post-tweet").serialize(),
+          success: () => {
+          $("#error").hide();  
           $("#tweet-text").val('');
           $(".counter").val(140);
           loadTweets()}
       });
-
+    }
       
   });
   loadTweets();
