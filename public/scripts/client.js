@@ -1,8 +1,11 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+* Client-side JS logic goes here
+* jQuery is already loaded
+* Reminder: Use (and do all your DOM work in) jQuery's document ready function
+*/
+$(document).ready(function() {
+
+//use escape to prevent cross site attacks
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -62,25 +65,19 @@ const $form = $('form');
         console.log("value---------->",event.target[0].length)
         return alert('You have got a lot to say, remember only 140 characters!');
       }
+
+
+      $.ajax("/tweets",{
+        method: "post",
+        data: $("#post-tweet").serialize(),
+        success: () => {
+          $("#tweet-text").val('');
+          
+          loadTweets()}
+      });
+
       
-    });
-
-$(document).ready(function() {
-
-  $("#post-tweet").submit(function(event){
-    event.preventDefault();
-    console.log("New Tweet Posted!");
-    //figuring out where value is coming form
-    // console.log("target---->", event.target[0].value)
-
-    $.ajax("/tweets",{
-      method: "post",
-      data: $("#post-tweet").serialize(),
-      success: () => {loadTweets()}
-    })
-  
   });
-
   loadTweets();
 });
 
