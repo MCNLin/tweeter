@@ -57,6 +57,11 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
+      <div id="error">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <br>
       <form id="post-tweet" method="POST" action="/tweets">
         <label for="tweet-text">What are you humming about?</label>
         <textarea class="textarea" name="text" id="tweet-text"rows = "1" minlength="1" type="submit" type= "text"></textarea>
@@ -86,7 +91,7 @@
           <div>
             <i class="far fa-flag"></i> 
             <i class="fas fa-retweet"></i>
-            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
           </div>
         </footer>
       </article>
