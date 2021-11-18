@@ -3,6 +3,7 @@
 * jQuery is already loaded
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
+
 $(document).ready(function() {
 
 //use escape to prevent cross site attacks
@@ -32,7 +33,7 @@ function createTweetElement (tweetData) {
   <span class="userHandle">${user.handle}</span>
     </header>
     <div class="tweet-content">
-    <p>${content.text}</p>
+    <p>${escape(content.text)}</p>
     </div>
     <footer>
     <p>${timeago.format(created_at)}</p>
@@ -72,7 +73,7 @@ const $form = $('form');
         data: $("#post-tweet").serialize(),
         success: () => {
           $("#tweet-text").val('');
-          
+          $(".counter").val(140);
           loadTweets()}
       });
 
