@@ -61,18 +61,17 @@ $(document).ready(function () {
     $("#error").hide();
     const newTweet = $(this).find("#tweet-text").val();
     if (!newTweet.trim()) {
-      $("#error")
-        .html("!!! Share something, don't be shy !!!").slideDown();
+      $("#error-message").text("!!! Share something, don't be shy !!!")
+        $("#error").slideDown();
     }
     if (newTweet.length > 140) {
-      $("#error")
-        .html("!!! You've got a lot to say, remember only 140 characters !!!").slideDown();
+      $("#error-message").text("!!! You've got a lot to say, remember only 140 characters !!!")
+        $("#error").slideDown();
     } else {
       $.ajax("/tweets", {
         method: "post",
         data: $("#post-tweet").serialize(),
         success: () => {
-          $("#error").hide();
           $("#tweet-text").val('');
           $(".counter").val(140);
           loadTweets();
