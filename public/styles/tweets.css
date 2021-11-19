@@ -1,3 +1,4 @@
+/*===================== TWEET STYLING ===================*/
 .tweet {
   display: flex;
   flex-direction: column;
@@ -8,11 +9,11 @@
   margin-top: 1em;
   padding: 0.5em;
   border-radius: 5px;
-  color: midnightblue;
+  /* color: midnightblue; */
 }
 
 article:hover {
-  box-shadow: 5px 5px rgba(67, 88, 128, 0.986);
+  box-shadow: 5px 5px #B8C0FF;
   transition-duration: 0.2s;
 }
 
@@ -20,6 +21,7 @@ article:hover {
   display: flex;
   flex-direction: row;
 }
+
 article.tweet > header {
   display: flex ;
   justify-content: space-between;
