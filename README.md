@@ -6,6 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
+Desktop View
 !["Tweeter's Desktop View"](https://github.com/MCNLin/tweeter/blob/master/docs/desktopview.png)
 
 !["Tweeter's Mobile View"](https://github.com/MCNLin/tweeter/blob/master/docs/tabletview.png)
