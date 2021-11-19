@@ -16,12 +16,10 @@ html {
 
 body {
   color: #ffffff;
-   background-color: midnightblue;
+  background-color: midnightblue;
   font-size: 24px;
   font-family:'Source Sans Pro', sans-serif;
   
-  /* background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-   */
 }
 
 /*
@@ -33,7 +31,31 @@ main {
   width: 90%;
   margin: auto;
   flex-direction: column;
-  /* align-items: center; */
-  /* background-color: midnightblue; */
+  align-items: center;
   color:white
 }
+/*================== RESPONSIVE DESIGN ================*/
+@media only screen and (min-width: 1024px) {
+  
+  main {
+    width: 50%;
+    float: right;
+    margin-top: 2em;
+    padding-right: 50px;
+  }
+  .profile {
+    width: 100%;
+    float: left;
+    height: auto;
+    margin:1em 15%;
+    
+  }
+
+  .header {
+    margin-top: 6em;
+    margin-right: 5rem;
+    width: 35%;
+    align-items: center;
+  }
+  
+} 
