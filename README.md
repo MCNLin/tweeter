@@ -17,6 +17,7 @@ Mobile and Tablet View - Have all your features at the tip of your fingers when 
 
 User Interface - Create tweets by inputting your thoughts in the text area, just be mindful that you only have 140 to do so! Be sweet and concise!
 !["Tweeter's UserInterface"](https://github.com/MCNLin/tweeter/blob/master/docs/heartselected.png)
+!["Error Message"](https://github.com/MCNLin/tweeter/blob/master/docs/errors.png)
 
 ## Getting Started
 
