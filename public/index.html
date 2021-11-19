@@ -4,145 +4,83 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-
+  
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    type="text/css" />
-
+  type="text/css" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-    
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+  <link
+  href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+  rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
   crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+  
+  
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
-
+  
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+  integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav class="banner">
-    <span class ="logo">tweeter</span>
-    <div class = "newtweet">
+    <span class="logo">tweeter</span>
+    <div class="newtweet">
       <span><strong>Write</strong> a new tweet</span>
       <span><i class="fas fa-angle-double-down arrow"></i> </span>
     </div>
   </nav>
-
-  <header class="profile">
-    <div>
-        <img src="/images/profile-hex.png"> 
-    </div>
-    <br>
-    <div>
-        <h2>MCNLin</h2>
-    </div>
-  </header>
-  
+  <div class="header">
+     <header class="profile">
+       <div>
+         <img src="/images/profile-hex.png">
+        </div>
+        <br>
+        <div>
+          <h2>MCNLin</h2>
+        </div>
+      </div>
+        </header>
+      </header>
+ 
+      
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <div id="error">
-      <i class="fa-solid fa-triangle-exclamation"></i>
-      <i class="fa-solid fa-triangle-exclamation"></i>
       </div>
       <br>
       <form id="post-tweet" method="POST" action="/tweets">
         <label for="tweet-text">What are you humming about?</label>
-        <textarea class="textarea" name="text" id="tweet-text"rows = "1" minlength="1" type="submit" type= "text"></textarea>
-        <div id= "tweet-below">
+        <textarea class="textarea" name="text" id="tweet-text" rows="1" minlength="1" type="submit"
+          type="text"></textarea>
+        <div id="tweet-below">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    <section id ="tweet-container">
-      </section>
-    <section>
-      <article class="tweet">
-        <header>
-          <div class ="username" >
-            <img src=https://cdn0.iconfinder.com/data/icons/people-avatars-9/24/people_avatar_head_einstein_albert_scientist-512.png alt=""/>
-            <div>Albert Einstein</div>
-          </div>
-          <div class="userhandle">@theDopeyOne</div>
-        </header>
-        <div class="tweet-content">
-          <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”</p>
-        </div>
-        
-        <footer>
-          <p>10 days ago</p>
-          <div>
-            <i class="far fa-flag"></i> 
-            <i class="fas fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+    <section id="tweet-container">
     </section>
-    <article class="tweet">
-      <header>
-        <div class ="username" >
-          <img src=https://static.thenounproject.com/png/53063-200.png alt=""/>
-          <div>Maya Angelou</div>
-        </div>
-        <div class="userhandle">@Maya</div>
-      </header>
-      <div class="tweet-content">
-        <p>“What you're supposed to do when you don't like a thing is change it. If you can't change it, change the way you think about it. Don't complain.”</p>
-      </div>
-      <footer>
-        <p>12 days ago</p>
-        <div>
-          <i class="far fa-flag"></i> 
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-        </div>
-      </footer>
-    </article>
-  </section>
-  <section>
-    <article class="tweet">
-      <header>
-        <div class ="username" >
-        <img src="/images/naruto.png" alt=""/>
-        <div>Uzumaki Naruto</div>
-      </div>
-      <div class="userhandle">@NanadaimeHokage</div>
-    </header>
-    <div class="tweet-content">
-      <p>“If you don’t like your destiny, don’t accept it. Instead have the courage to change it the way you want it to be.”</p>
-    </div>
-    
-    <footer>
-      <p>16 days ago</p>
-      <div>
-        <i class="far fa-flag"></i> 
-        <i class="fas fa-retweet"></i>
-        <i class="far fa-heart"></i>
-      </div>
-    </footer>
-  </article>
-</section>
-
-</main>
+  </main>
 </body>
 
 </html>
-
