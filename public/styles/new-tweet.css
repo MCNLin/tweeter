@@ -1,3 +1,4 @@
+/*===================== TWEET STYLING ===================*/
 .new-tweet {
   display: flex;
   width: 100%;
@@ -7,8 +8,8 @@
 
 
 #tweet-text {
-  border-top-width: 0px;
   border-right-width: 0px;
+  border-top-width: 0px;
   border-left-width: 0px;
   margin-top: 1em;
   min-height: 1em;
@@ -16,8 +17,8 @@
   max-width: 100%;
   font-weight: bolder;
   color:white;
-  border-bottom: 3px solid#ffffff;
   background:midnightblue;
+  border-bottom: 3px solid#ffffff;
 }
 
 .counter {
@@ -40,6 +41,8 @@ button {
   padding-top: 7px ;
 }
 
+/*========== ERROR MESSAGE STYLING ========*/
+
 #error {
   display:flex;
   text-align: center;
@@ -54,3 +57,5 @@ button {
   border: solid;
   
 };
+
+ 
