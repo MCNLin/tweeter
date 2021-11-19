@@ -45,13 +45,12 @@ button {
 #error {
   display:flex;
   text-align: center;
-  color: rgb(246, 99, 0);
+  color: red;
+  background-color: #f7b5ad;
   font-weight: 600;
   justify-content: space-between;
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-right: 5%;
+  padding-left: 5%;
   border: solid;
   align-items: center
   
