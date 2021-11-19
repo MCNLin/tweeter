@@ -4,7 +4,7 @@
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
-$(document).ready(function () {
+$(document).ready(function() {
 
   //use escape to prevent cross site attacks
   const escape = function(str) {
@@ -53,7 +53,7 @@ $(document).ready(function () {
         console.log('Success: ', tweets);
       });
   };
-/*======================================= ERROR MESSAGE HANDLING ====================================*/
+  /*======================================= ERROR MESSAGE HANDLING ====================================*/
   const $form = $('form');
   $("#error").hide();
   $form.on('submit', function(event) {
@@ -62,11 +62,11 @@ $(document).ready(function () {
     const newTweet = $(this).find("#tweet-text").val();
     if (!newTweet.trim()) {
       $("#error-message").text("!!! Share something, don't be shy !!!")
-        $("#error").slideDown();
+      $("#error").slideDown();
     }
     if (newTweet.length > 140) {
       $("#error-message").text("!!! You've got a lot to say, remember only 140 characters !!!")
-        $("#error").slideDown();
+      $("#error").slideDown();
     } else {
       $.ajax("/tweets", {
         method: "post",
